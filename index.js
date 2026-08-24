@@ -3,12 +3,8 @@ import mysql2 from "mysql2"
 import cors from "cors"
 
 const app = express()
-
-app.use(cors({
-    origin: "https://w-o2zf.vercel.app"
-}))
-
 app.use(express.json())
+app.use(cors())
 
 const sql = mysql2.createPool({
     host: "benserverplex.ddns.net",
